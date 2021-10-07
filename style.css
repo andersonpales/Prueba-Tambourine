@@ -58,9 +58,9 @@ text-align: center;
 }
 
 .logo-box div p{
-  font-size: 10px;
-  letter-spacing: 2px;
-  font-weight: 500;
+font-size: 10px;
+letter-spacing: 2px;
+font-weight: 500;
 margin-left: 50px;
 }
 
@@ -128,7 +128,7 @@ z-index: 2;
 
 .content-black-box h2 {
 font-family: 'Playfair Display', serif, Helvetica, Arial;
-  font-weight: 400;
+font-weight: 400;
 margin-block-start: 0;
 width: 13em;
 text-align: center;
@@ -140,8 +140,8 @@ margin-bottom: 0;
 }
 
 .content-black-box h3 {
-  font-family: 'Playfair Display', serif, Helvetica, Arial;
-    font-weight: 400;
+font-family: 'Playfair Display', serif, Helvetica, Arial;
+font-weight: 400;
 margin-block-start: 0;
 text-align: center;
 color: #ffffff;
@@ -240,7 +240,7 @@ background-color: #ffffff;
 }
 
 .events-section h4{
-  font-weight: 300;
+font-weight: 300;
 }
 
 .events-box{
@@ -301,7 +301,7 @@ font-size: 14px;
 .booknow{
 position: fixed;
 top: 8em;
-right: -4em;
+right: -4.5em;
 transform: rotate(-90deg);
 z-index: 99;
 }
@@ -313,6 +313,8 @@ background-color: #000000;
 text-decoration: none;
 cursor: pointer;
 border: 0px;
+font-weight: 600;
+letter-spacing: 1px;
 }
 
 
@@ -332,9 +334,11 @@ z-index: 99;
 }
 
 .sidenav h2{
+font-family: 'Playfair Display', serif, Helvetica, Arial;
+font-weight: 400;
 text-align: center;
-  color: #ffffff;
-  font-size: 32px;
+color: #ffffff;
+font-size: 34px;
 }
 
 .sidenav a {
@@ -364,12 +368,6 @@ transition: margin-right .5s;
 padding: 8px;
 }
 
-@media screen and (max-height: 450px) {
-.sidenav {padding-top: 15px;}
-.sidenav a {font-size: 18px;}
-}
-
-
 div.elem-group {
 margin: 20px 0;
 }
@@ -388,7 +386,8 @@ padding: 0px 50px 50px 50px;
 label {
 display: block;
 padding-bottom: 10px;
-font-size: 1.25em;
+font-size: 14px;
+font-weight: 600;
 color: #ffffff;
 }
 
@@ -410,24 +409,41 @@ textarea {
 height: 250px;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+font-size: 14px; !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+font-family: 'Montserrat', Helvetica, Arial, sans-serif !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+font-family: 'Montserrat', Helvetica, Arial, sans-serif !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+font-family: 'Montserrat', Helvetica, Arial, sans-serif !important;
+}
+
 .booknow-form p{
+font-family: 'Playfair Display', serif, Helvetica, Arial;
 text-align: center;
 color: #878f94;
 font-size: 18px;
 line-height: 24px;
-padding: 0 20px 0 20px;
 }
 
 .booknow-form .button-box{
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
 
 .booknow-form button{
+font-family: 'Playfair Display', serif, Helvetica, Arial;
+font-weight: 600;
 color: #c71c22;
 border: 2px solid ;
 background-color: #111111;
 padding: 10px 30px 10px 30px;
+margin-top: 20px;
 }
 
 .booknow-form button:hover {
@@ -437,4 +453,71 @@ background-color: #c71c22;
 padding: 10px 30px 10px 30px;
 opacity: 1;
 transition: 0.5s; 
+}
+
+/* -------- Media Query -------- */
+
+@media screen and (max-height: 450px) {
+.sidenav {
+  padding-top: 15px;
+}
+.sidenav a {
+  font-size: 18px;
+}
+}
+
+@media (max-width: 769px){
+.logo-box div p {
+  margin-left: 20px;
+}
+
+.logo-box img {
+  width: 10em;
+  height: 10em;
+}
+
+.content-black-box {
+      height: auto;
+    padding: 0 30px 30px 30px;
+}
+
+.content-black-box h2 {
+  font-size: 2rem;
+  width: 10em;
+
+}
+.content-black-box h3 {
+  font-size: 1.5rem;
+}
+
+.content-black-box p {
+  width: 100%;
+}
+.logo-box {
+  margin-top: -65vh;
+}
+.accomodation-box {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.info-cta {
+  width: 80%;
+  padding-right: 0px;
+  text-align: center;
+}
+.image-box {
+  width: 100%;
+  padding: 10px;
+  margin-top: 50px;
+}
+.footer-box {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0 5px 0;
+  color: #878f94;
+  font-size: 14px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
 }
