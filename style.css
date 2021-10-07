@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
 body {
@@ -7,12 +9,15 @@ height: 100%;
 
 body {
 background: #eee;
-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 font-size: 14px;
 color: #000;
 margin: 0;
 padding: 0;
+transition: background-color .5s;
 }
+
+/* -------- Hero Section ---------- */
 
 .hero-section{
 display: flex;
@@ -20,7 +25,7 @@ flex-wrap: wrap;
 justify-content: center;
 align-content: flex-end;
 width: 100%;
-height: 100vh;
+height: 110vh;
 background-color: #000;
 }
 
@@ -53,6 +58,9 @@ text-align: center;
 }
 
 .logo-box div p{
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 500;
 margin-left: 50px;
 }
 
@@ -78,7 +86,6 @@ font-size: 18px;
 background: #fff;
 background-position: top-center;
 background-size: cover;
-/* Center slide text vertically */
 display: -webkit-box;
 display: -ms-flexbox;
 display: -webkit-flex;
@@ -112,7 +119,7 @@ flex-direction: column;
 align-items: center;
 max-width: 1024px;
 width: 100%;
-height: 40vh;
+height: 50vh;
 background-color: #000000;
 margin-top: -20vh;
 z-index: 2;
@@ -120,30 +127,36 @@ z-index: 2;
 }
 
 .content-black-box h2 {
+font-family: 'Playfair Display', serif, Helvetica, Arial;
+  font-weight: 400;
 margin-block-start: 0;
 width: 13em;
 text-align: center;
 color: #ffffff;
-font-size: 48px;
+font-size: 46px;
 border-top: 5px solid #ffffff;
 padding: 20px 0 0 0; 
 margin-bottom: 0;
 }
 
 .content-black-box h3 {
+  font-family: 'Playfair Display', serif, Helvetica, Arial;
+    font-weight: 400;
 margin-block-start: 0;
 text-align: center;
 color: #ffffff;
-font-size: 28px;
+font-size: 26px;
 }
 
 .content-black-box p {
 width: 75%;
 text-align: center;
 color: #ffffff;
-font-size: 16px;
+font-size: 14px;
 line-height: 24px;
 }
+
+/* -------- Accomodation Section ---------- */
 
 .accomodations-section{
 width: 100%;
@@ -159,7 +172,9 @@ justify-content: center;
 .accomodation-box h2{
 text-align: center;
 color: #000000;
-font-size: 18px;
+font-size: 16px;
+font-weight: 500;
+letter-spacing: 1px;
 }
 
 .accomodation-box h3{
@@ -216,10 +231,16 @@ width: 100%;
 box-shadow: 5px 5px 22px 0px rgba(0,0,0,0.17);
 }
 
+/* -------- Events Section ---------- */
+
 .events-section{
 width: 100%;
 padding: 50px 0 90px 0;
 background-color: #ffffff;
+}
+
+.events-section h4{
+  font-weight: 300;
 }
 
 .events-box{
@@ -256,34 +277,164 @@ color: #ffffff;
 .card .date .number{
 margin-block-start: 0;
 margin: 0 10px 0 10px;
-font-size: 52px;}
+font-size: 52px;
+font-weight: 600;
+}
 
 .card .date .month{
 margin: 0px;
-font-size: 24px;
+font-size: 22px;
 transform: rotate(-90deg);
+font-weight: 600;
 }
 
+/* -------- Footer Section & Booknow CTA ---------- */
+
 .footer-box{
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0 5px 0;
-  color: #878f94;
-  font-size: 14px;
+display: flex;
+justify-content: space-between;
+padding: 5px 0 5px 0;
+color: #878f94;
+font-size: 14px;
 }
 
 .booknow{
-  position: fixed;
-    top: 8em;
-    right: -4em;
-    transform: rotate(-90deg);
-    z-index: 99;
+position: fixed;
+top: 8em;
+right: -4em;
+transform: rotate(-90deg);
+z-index: 99;
 }
 
-.booknow a{
-  padding: 10px 30px 10px 30px;
+.booknow button{
+padding: 10px 30px 10px 30px;
+color: #ffffff;
+background-color: #000000; 
+text-decoration: none;
+cursor: pointer;
+border: 0px;
+}
+
+
+
+.sidenav {
+height: 75%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+background-color: #111111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 50px;
+z-index: 99;
+}
+
+.sidenav h2{
+text-align: center;
   color: #ffffff;
-  background-color: #000000; 
-  text-decoration: none;
-  cursor: pointer;
+  font-size: 32px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+left: 25px;
+font-size: 28px;
+margin-left: -30px;
+color: #c71c22;
+}
+
+#main {
+transition: margin-right .5s;
+padding: 8px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+
+div.elem-group {
+margin: 20px 0;
+}
+
+div.elem-group.inlined {
+width: 49%;
+display: inline-block;
+float: left;
+margin-left: 1%;
+}
+
+.booknow-form{
+padding: 0px 50px 50px 50px;
+}
+
+label {
+display: block;
+padding-bottom: 10px;
+font-size: 1.25em;
+color: #ffffff;
+}
+
+input, select, textarea {
+border-radius: 0px;
+border: 0px;
+box-sizing: border-box;
+font-size: 1.25em;
+width: 100%;
+padding: 10px;
+}
+
+div.elem-group.inlined input {
+width: 95%;
+display: inline-block;
+}
+
+textarea {
+height: 250px;
+}
+
+.booknow-form p{
+text-align: center;
+color: #878f94;
+font-size: 18px;
+line-height: 24px;
+padding: 0 20px 0 20px;
+}
+
+.booknow-form .button-box{
+  display: flex;
+  justify-content: center;
+}
+
+.booknow-form button{
+color: #c71c22;
+border: 2px solid ;
+background-color: #111111;
+padding: 10px 30px 10px 30px;
+}
+
+.booknow-form button:hover {
+color: #ffffff;
+border: 2px solid #c71c22;
+background-color: #c71c22;
+padding: 10px 30px 10px 30px;
+opacity: 1;
+transition: 0.5s; 
 }
