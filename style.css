@@ -23,22 +23,40 @@ height: 100vh;
 background-color: #000;
 }
 
+.hero-container{
+  max-width: 1200px;
+  border: 2px solid red;
+}
+
 .logo-box{
-width: 60%;
+width: 70%;
 height: 7em;
 background-color: #ffffffd9;
 z-index: 2;
-margin-top: -80vh;
+margin-top: -70vh;
 display: flex;
-flex-wrap: wrap;
 justify-content: center;
 align-content: center;
-grid-gap: 20%;
+flex-direction: column;
+flex-wrap: wrap;
 }
 
-.logo-box img{
-  width: 50px;
-  height: 50px;
+.logo-box div {
+width: 33%;
+}
+
+.logo-box div:nth-child(2n) {
+text-align: center;
+}
+
+.logo-box div p{
+margin-left: 50px;
+}
+
+
+.logo-box img {
+width: 13em;
+height: 13em;
 }
 
 .swiper-container{
@@ -84,4 +102,40 @@ margin: 0 30px 0px 30px;
 color: #fff !important;
 }
 
+.content-black-box{
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+align-items: center;
+width: 70%;
+height: 40vh;
+background-color: #000000;
+margin-top: -20vh;
+z-index: 2;
 
+}
+
+.content-black-box h2 {
+margin-block-start: 0;
+width: 13em;
+text-align: center;
+color: #ffffff;
+font-size: 48px;
+border-top: 5px solid #ffffff;
+padding: 20px 0 0 0; 
+margin-bottom: 0;
+}
+
+.content-black-box h3 {
+margin-block-start: 0;
+text-align: center;
+color: #ffffff;
+font-size: 28px;
+}
+
+.content-black-box p {
+width: 70%;
+text-align: center;
+color: #ffffff;
+font-size: 16px;
+}
